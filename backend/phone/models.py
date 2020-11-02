@@ -8,6 +8,14 @@ class Call(models.Model):
         "call.Phone",
         related_name="call_placecall",
     )
+    history = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+    callorigin = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
 
 
 # Create your models here.
