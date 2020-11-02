@@ -16,6 +16,10 @@ class Call(models.Model):
         null=True,
         blank=True,
     )
+    lastcall = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
 
 
 # Create your models here.
