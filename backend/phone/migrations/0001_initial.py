@@ -8,15 +8,28 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('call', '0002_remove_phone_placecall'),
+        ("call", "0002_remove_phone_placecall"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Call',
+            name="Call",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('placecall', models.ManyToManyField(related_name='call_placecall', to='call.Phone')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "placecall",
+                    models.ManyToManyField(
+                        related_name="call_placecall", to="call.Phone"
+                    ),
+                ),
             ],
         ),
     ]

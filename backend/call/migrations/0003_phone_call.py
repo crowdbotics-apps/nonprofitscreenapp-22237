@@ -6,14 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('phone', '0001_initial'),
-        ('call', '0002_remove_phone_placecall'),
+        ("phone", "0001_initial"),
+        ("call", "0002_remove_phone_placecall"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='phone',
-            name='call',
-            field=models.ManyToManyField(blank=True, related_name='phone_call', to='phone.Call'),
+            model_name="phone",
+            name="call",
+            field=models.ManyToManyField(
+                blank=True, related_name="phone_call", to="phone.Call"
+            ),
         ),
     ]
