@@ -4,10 +4,10 @@ from django.db import models
 
 class Phone(models.Model):
     "Generated Model"
-    placecall = models.ForeignKey(
-        "home.CustomText",
-        on_delete=models.CASCADE,
-        related_name="phone_placecall",
+    call = models.ManyToManyField(
+        "phone.Call",
+        blank=True,
+        related_name="phone_call",
     )
 
 
